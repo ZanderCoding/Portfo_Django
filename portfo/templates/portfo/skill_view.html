@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Skills</title>
+    </head>
+    <body>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <hr>
+        <h1>Skills</h1>
+        {% for skill in skills %}
+            <div>
+                <h3>{{ skill.name }}</h3>
+                <p>{{ skill.description }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
