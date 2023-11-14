@@ -1,0 +1,13 @@
+{% load tailwind_filters %}
+
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        {% comment %} Move to _base.html when created {% endcomment %}
+        <title>Skill Detail</title>
+    </head>
+    <body>
+        <h1>{{ skill.name }} | {{ skill.field }}<h1>
+        <h3>{{ skill.description }}
+    </body>
+</html>
