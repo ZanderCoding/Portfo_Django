@@ -22,3 +22,7 @@ def skill_view(request):
         'skills': skills
     }
     return render(request, 'portfo/skill_view.html', context)
+
+
+class SkillDetailView(DetailView):
+    model = Skill

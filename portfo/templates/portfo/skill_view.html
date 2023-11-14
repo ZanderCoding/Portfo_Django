@@ -1,5 +1,9 @@
+{% load tailwind_filters %}
+
 <html>
     <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        {% comment %} Move to _base.html when created {% endcomment %}
         <title>Skills</title>
     </head>
     <body>
@@ -8,10 +12,13 @@
         <hr>
         <h1>Skills</h1>
         {% for skill in skills %}
-            <div>
-                <h3>{{ skill.name }}</h3>
-                <p>{{ skill.description }}</p>
-            </div>
+            <a href="{% url 'skill-detail' skill.pk  %}"> 
+                <div class="bg-gray-50 p-10 rounded shadow my-4 hover:shadow-lg hover:cursor-pointer">
+                    <p class="text-lg">
+                        {{ skill.name }} | {{ skill.description }}
+                    </p>
+                </div>
+            </a>
         {% endfor %}
     </body>
 </html>
