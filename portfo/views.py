@@ -26,3 +26,7 @@ def skill_view(request):
 
 def contact(request):
     return HttpResponse('<h1>You can contact me here in the future</h1>')
+
+
+class SkillDetailView(DetailView):
+    model = Skill
