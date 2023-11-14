@@ -22,3 +22,7 @@ def skill_view(request):
         'skills': skills
     }
     return render(request, 'portfo/skill_view.html', context)
+
+
+def contact(request):
+    return HttpResponse('<h1>You can contact me here in the future</h1>')
