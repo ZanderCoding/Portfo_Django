@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
-        <title>Skill</title>
+        <title>{% block title %}{% endblock title %}</title>
     </head>
     <body>
         <a href="{% url 'home' %}">Home</a>
@@ -12,7 +12,6 @@
         <a href="{% url 'skill' %}">Skills</a>
         <a href="{% url 'projects-page' %}">Projects</a>
         <a href="{% url 'contact' %}">Contact</a>
-
         <hr>
         <div>
             {% block content %}
