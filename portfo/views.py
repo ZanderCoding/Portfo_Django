@@ -42,3 +42,7 @@ def contact_success_view(request):
 
 class SkillDetailView(DetailView):
     model = Skill
+
+
+def projects_page(request):
+    return render(request, 'portfo/projects_page.html')
