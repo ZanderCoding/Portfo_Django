@@ -1,9 +1,6 @@
 {% extends "portfo/_base.html" %}
 
 {% block content %}
-    <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'about' %}">About</a>
-    <hr>
     <h1>Skills</h1>
     {% for skill in skills %}
         <a href="{% url 'skill-detail' skill.pk  %}"> 
