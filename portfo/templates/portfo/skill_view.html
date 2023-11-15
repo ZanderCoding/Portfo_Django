@@ -1,25 +1,14 @@
-{% load tailwind_filters %}
+{% extends "portfo/_base.html" %}
 
-<html>
-    <head>
-        <script src="https://cdn.tailwindcss.com"></script>
-        {% comment %} Move to _base.html when created {% endcomment %}
-        <title>Skills</title>
-    </head>
-    <body>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'contact' %}">Contact</a>
-        <hr>
-        <h1>Skills</h1>
-        {% for skill in skills %}
-            <a href="{% url 'skill-detail' skill.pk  %}"> 
-                <div class="bg-gray-50 p-10 rounded shadow my-4 hover:shadow-lg hover:cursor-pointer">
-                    <p class="text-lg">
-                        {{ skill.name }} | {{ skill.field }}
-                    </p>
-                </div>
-            </a>
-        {% endfor %}
-    </body>
-</html>
+{% block content %}
+    <h1>Skills</h1>
+    {% for skill in skills %}
+        <a href="{% url 'skill-detail' skill.pk  %}"> 
+            <div class="bg-gray-50 p-10 rounded shadow my-4 hover:shadow-lg hover:cursor-pointer">
+                <p class="text-lg">
+                    {{ skill.name }} | {{ skill.field }}
+                </p>
+            </div>
+        </a>
+    {% endfor %}
+{% endblock content %}
