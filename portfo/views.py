@@ -1,9 +1,7 @@
-from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render, HttpResponse
-
+from django.shortcuts import render, HttpResponse, redirect
 from django.views.generic import TemplateView, DetailView
+from .forms import ContactForm
+
 from .models import Skill
 # Create your views here.
 
@@ -24,8 +22,22 @@ def skill_view(request):
     return render(request, 'portfo/skill_view.html', context)
 
 
-def contact(request):
-    return HttpResponse('<h1>You can contact me here in the future</h1>')
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/contact/success/')
+    else:
+        form = ContactForm()
+    contex = {
+        'form': form
+    }
+    return render(request, 'portfo/contact.html', contex)
+
+
+def contact_success_view(request):
+    return render(request, 'portfo/contact_success.html')
 
 
 class SkillDetailView(DetailView):
