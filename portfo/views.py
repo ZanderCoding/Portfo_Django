@@ -10,8 +10,8 @@ class HomeView(TemplateView):
     template_name = "portfo/index.html"
 
 
-def about(request):
-    return HttpResponse('<h1>About</h1>')
+class About(TemplateView):
+    template_name = 'portfo/about.html'
 
 
 def skill_view(request):
