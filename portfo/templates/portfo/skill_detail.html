@@ -2,6 +2,12 @@
 {% block title %}Skill{% endblock title %}
 
 {% block content %}
-    <h1>{{ skill.name }} | {{ skill.field }}<h1>
-    <h3>{{ skill.description }}
+    <header class="text-center">
+        <h1 class="text-2xl font-bold mb-4">{{skill.name}}</h1>
+    </header>
+    <section class="mt-8 text-center">
+        <h3>{{ skill.field|title }}<h3>
+        <br>
+        <p>{{ skill.description }}</p>
+    </section>
 {% endblock content %}
