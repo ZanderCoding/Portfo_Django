@@ -2,6 +2,13 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-    <h1>This is the Home Page</h1>
-    <h3>This is the first page you will see</h3>
+    <header class="text-center">
+        <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
+        <p class="text-lg">I am a passionate web developer.</p>
+    </header>
+    <section class="mt-8 text-center">
+        <a class="text-md font-bold mb-4" href="{% url 'projects-page' %}">Click Here to go to Projects</a>
+        <br>
+        <a class="text-md font-bold mb-4" href="{% url 'skill' %}">Click Here to go to Skills</a>
+    </section>
 {% endblock content%}
