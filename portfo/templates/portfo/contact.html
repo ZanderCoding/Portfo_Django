@@ -10,20 +10,7 @@
 
     <form method="POST" action="{% url 'contact' %}" class="max-w-lg mx-auto mt-1 " enctype="multipart/form-data">
         {% csrf_token %}
-        <div class="">
-            <div class="">
-                {{ form.name|as_crispy_field }}
-            </div>
-            <div class="">
-                {{ form.email|as_crispy_field }}
-            </div>
-            <div class="">
-                {{ form.phone_number|as_crispy_field }}
-            </div>
-            <div class="">
-                {{ form.message|as_crispy_field }}
-            </div>
-        </div>
-        <input class="bg-gray-900 px-4 py-2 rounded hover:cursor-pointer hover:bg-gray-700" type="submit" value="Submit">
+        {{ form|crispy }}
+        <input class="bg-green-500 px-4 py-1 rounded hover:cursor-pointer hover:bg-green-600" type="submit" value="Submit">
     </form>
 {% endblock content %}
