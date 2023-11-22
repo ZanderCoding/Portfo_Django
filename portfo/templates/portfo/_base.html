@@ -3,16 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
+        {% comment %} <script src="https://cdn.tailwindcss.com"></script> {% endcomment %}
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <title>{% block title %}{% endblock title %}</title>
     </head>
-    <body class="flex flex-col min-h-screen font-sans bg-gray-800 text-white">
-        <nav class="p-4 bg-gray-900 text-white">
-             <div class="flex-1 container mx-auto">
-                <a href="{% url 'home' %}">Home</a>
-                <a href="{% url 'about' %}">About</a>
-                <a href="{% url 'skill' %}">Skills</a>
-                <a href="{% url 'projects-page' %}">Projects</a>
+    <body class="flex flex-col min-h-screen font-sans bg-white text-teal-500">
+        <nav class="p-4 bg-gray-100 text-red-500">
+             <div class="flex-1 container mx-auto ">
+                <a href="{% url 'home' %}" class="pr-1">Home</a>
+                <a href="{% url 'about' %}" class="pr-1">About</a>
+                <a href="{% url 'skill' %}" class="pr-1">Skills</a>
+                <a href="{% url 'projects-page' %}" class="pr-1">Projects</a>
                 <a href="{% url 'contact' %}">Contact</a>
             </div>
         </nav>
@@ -21,7 +22,8 @@
             {% block content %}
             {% endblock content %}
         </div>
-        <footer class="bg-gray-800 text-white p-4 mt-auto">
+        <footer class="bg-gray-100 text-teal-500 p-4 mt-auto">
             <p>This is the Footer</p>
         </footer>
     </body>
+</html>

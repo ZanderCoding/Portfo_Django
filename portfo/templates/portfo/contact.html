@@ -1,13 +1,16 @@
 {% extends "portfo/_base.html" %}
 {% load tailwind_filters %}
+
 {% block title %}Contact{% endblock title %}
 
 {% block content %}
-    <h1>Contact Me</h1>
+    <header class="text-center">
+        <h1 class="text-4xl font-bold mb-1">Contact Me</h1>
+    </header>
 
-    <form method="POST" action="{% url 'contact' %}">
+    <form method="POST" action="{% url 'contact' %}" class="max-w-lg mx-auto mt-1 " enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form|crispy  }}
-        <button type="submit">Submit</button>
+        {{ form|crispy }}
+        <input class="bg-green-500 px-4 py-1 rounded hover:cursor-pointer hover:bg-green-600" type="submit" value="Submit">
     </form>
 {% endblock content %}
