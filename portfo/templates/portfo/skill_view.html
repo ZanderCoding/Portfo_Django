@@ -8,11 +8,11 @@
     <section class="mt-8">
         {% for skill in skills %}
             <a href="{% url 'skill-detail' skill.pk  %}"> 
-                <div class="text-center bg-gray-900 p-6 m-2 rounded shadow hover:shadow-lg hover:cursor-pointer">
+                <div class="text-center bg-gray-900 p-6 m-2 text-white rounded shadow hover:shadow-2xl hover:cursor-pointer">
                     <h3 class="text-xl font-bold mb-2">{{ skill.name }}</h3>
-                    <p class="text-x1">{{ skill.field }}</p>
+                    <p class="text-x1">{{ skill.field|title }}</p>
                 </div>
             </a>
+        {% endfor %}
     </section>
-    {% endfor %}
 {% endblock content %}
