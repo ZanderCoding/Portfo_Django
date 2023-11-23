@@ -1,5 +1,11 @@
 {% extends "portfo/_base.html" %}
+
 {% block title %}Contact{% endblock title %}
+
 {% block content %}
-    <h1>Thank You for Contacting</h1>
+    <header class="text-center">
+        <h1 class="text-4xl font-bold mt-5">Thank You for Contacting Me</h1>
+    </header>
+    <section class="text-center">
+        <p class="text-xl p-5">Click <a href="{% url 'home' %}" class="text-xl font-bold">Here</a> To Go Back To Home</p>
 {% endblock content %}

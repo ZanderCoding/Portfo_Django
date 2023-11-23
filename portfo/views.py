@@ -27,7 +27,7 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/contact/success/')
+            return redirect('contact-sucess')
     else:
         form = ContactForm()
     contex = {
