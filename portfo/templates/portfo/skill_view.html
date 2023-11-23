@@ -3,16 +3,16 @@
 
 {% block content %}
     <header class="text-center">
-        <h1 class="text-2xl font-bold mb-4">Skills</h1>
+        <h1 class="text-4xl font-bold mb-4">Skills</h1>
     </header>
-    <section class="mt-8">
+    <section class="grid grid-cols-5 gap-1 mt-8">
         {% for skill in skills %}
             <a href="{% url 'skill-detail' skill.pk  %}"> 
-                <div class="text-center bg-gray-900 p-6 m-2 rounded shadow hover:shadow-lg hover:cursor-pointer">
+                <div class="text-center bg-gray-900 p-4 m-1 text-white rounded hover:shadow-2xl hover:cursor-pointer hover:bg-white hover:text-gray-900">
                     <h3 class="text-xl font-bold mb-2">{{ skill.name }}</h3>
-                    <p class="text-x1">{{ skill.field }}</p>
+                    <p class="text-x1">{{ skill.field|title }}</p>
                 </div>
             </a>
+        {% endfor %}
     </section>
-    {% endfor %}
 {% endblock content %}
