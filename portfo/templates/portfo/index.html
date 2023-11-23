@@ -4,11 +4,11 @@
 {% block content %}
     <header class="text-center">
         <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
-        <p class="text-lg">I am a passionate web developer.</p>
+        <p class="text-2xl">I am a passionate web developer.</p>
     </header>
     <section class="mt-8 text-center">
-        <a class="text-md font-bold mb-4" href="{% url 'projects-page' %}">Click Here to go to Projects</a>
+        <p class="text-xl">Click <a class="text-xl font-bold" href="{% url 'projects-page' %}">Here</a> to go to Projects</p>
         <br>
-        <a class="text-md font-bold mb-4" href="{% url 'skill' %}">Click Here to go to Skills</a>
+        <p class="text-xl">Click <a class="text-md font-bold mb-4" href="{% url 'skill' %}">Here</a> to go to Skills</p>
     </section>
 {% endblock content%}
