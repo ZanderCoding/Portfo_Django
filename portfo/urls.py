@@ -8,6 +8,6 @@ urlpatterns = [
     path('skill/', skill_view, name='skill'),
     path('projects/', projects_page, name='projects-page'),
     path('contact/', contact_view, name='contact'),
-    path('contact/success/', contact_success_view, name='contact-sucess'),
+    path('success/', contact_success_view, name='contact-sucess'),
     path('skill/<int:pk>/', SkillDetailView.as_view(), name='skill-detail'),
 ]
