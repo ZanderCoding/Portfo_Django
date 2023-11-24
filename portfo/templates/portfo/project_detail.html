@@ -1,0 +1,17 @@
+{% extends "portfo/_base.html" %}
+
+{% block title %}Project{% endblock title %}
+
+{% block content %}
+    <header class="text-center">
+        <h1 class="text-4xl font-bold mb-4">Project</h1>
+    </header>
+    <section class="text-center mt-5 text-2xl">
+        {{ project.name }}
+        <br>
+        {{ project.description }}
+        <br>
+        {{ project.source_code }}
+    </section>
+
+{% endblock content %}

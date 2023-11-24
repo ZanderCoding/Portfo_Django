@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.views.generic import TemplateView, DetailView
 from .forms import ContactForm
 
-from .models import Skill
+from .models import Skill, Project
 # Create your views here.
 
 
@@ -44,5 +44,13 @@ class SkillDetailView(DetailView):
     model = Skill
 
 
-def projects_page(request):
-    return render(request, 'portfo/projects_page.html')
+def project_view(request):
+    projects = Project.objects.all()
+    context = {
+        'projects': projects
+    }
+    return render(request, 'portfo/projects_page.html', context)
+
+
+class ProjectDetailView(DetailView):
+    model = Project
