@@ -3,5 +3,17 @@
 {% block title %}Projects{% endblock title %}
 
 {% block content %}
-    <h1>This is the Projects Page</h1>
+    <header class="text-center">
+        <h1 class="text-4xl font-bold mb-4">Projects</h1>
+    </header>
+    <section class="grid grid-cols-5 gap-1 mt-8">
+        {% for project in projects %}
+            <a href="{% url 'project-detail' project.pk  %}"> 
+                <div class="text-center bg-gray-900 p-4 m-1 text-white rounded hover:shadow-2xl hover:cursor-pointer hover:bg-gray-100 hover:text-gray-900">
+                    <h3 class="text-xl font-bold">{{ project.name }}</h3>
+                    {% comment %} <p class="text-x1">{{ project.description }}</p> {% endcomment %}
+                </div>
+            </a>
+        {% endfor %}
+    </section>
 {% endblock content %}
