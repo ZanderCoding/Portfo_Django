@@ -23,8 +23,24 @@
             {% block content %}
             {% endblock content %}
         </div>
-        <footer class="bg-gray-100 text-teal-500 p-4 mt-auto">
-            <p>This is the Footer</p>
+        <footer class="bg-gray-100 text-teal-500 p-3 mt-auto">
+            <div class="mx-auto flex justify-between items-center">
+                <!-- Contact Information -->
+                <div>
+                    <p class="text-sm">Contact: Alexander.Swearingen24@gmail.com | Phone: +1 (208) 301-8274 | <a href="{% url 'contact' %}">Contact Page</a></p>
+                </div>
+                <div class="flex space-x-4">
+                    <!-- GitHub -->
+                    <a href="https://github.com/ZanderCoding" target="_blank" rel="noopener noreferrer">
+                        <img src="{% static 'portfo/images/github-mark.png' %}" alt="GitHub" class="h-6 w-6">
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/alexander-swearingen-655047262/" target="_blank" rel="noopener noreferrer">
+                        <img src="{% static 'portfo/images/In-Blue-26-╬ô├ñ├│.png' %}" alt="LinkedIn" class="h-6 w-9">
+                    </a>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
