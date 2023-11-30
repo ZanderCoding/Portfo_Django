@@ -1,14 +1,22 @@
 {% extends "portfo/_base.html" %}
+{% load static %}
 {% block title %}Home{% endblock title %}
 
 {% block content %}
     <header class="text-center">
-        <h1 class="text-6xl font-bold mb-12">Welcome to My Portfolio Website</h1>
+        <h1 id="typed-text-1" class="font-bold text-6xl mb-12"></h1>
         <h2 class="text-4xl font-bold mb-12">My name is ----</h2>
-        <p class="text-3xl">I am a Full Stack Dango Web Developer.</p>
+        <div class="text-3xl flex items-center text-center justify-center">
+            <div>I am a</div>
+            <span class="ml-1">&nbsp;</span>
+            <div id="typed-text-2"></div>
+        </div>
     </header>
     <section class="mt-8 text-center">
         <p class="text-2xl mb-2">Click <a class="font-bold" href="{% url 'skill' %}">Here</a> to see the rest of my Skills</p>
         <p class="text-2xl">Or <a class="font-bold" href="{% url 'projects-page' %}">Here</a> to see some Projects</p>
     </section>
+    <script src="{% static 'portfo/js/homeAnimation.js' %}"></script>
+    <script>animateTitle('typed-text-1', ['Welcome to my Portfolio Website']);</script>
+    <script>animate('typed-text-2', ['Full Stack Django Web Developer.', 'Python Engineer']);</script>
 {% endblock content%}
