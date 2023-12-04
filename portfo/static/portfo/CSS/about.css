@@ -1,0 +1,12 @@
+/* Equivalent to Tailwind's 'text-3xl', mb-4, and font-bold*/
+h3 {
+    font-weight: bold;
+    font-size: 1.875rem;
+    margin: 1rem;
+}
+
+/* Equivalent to Tailwind's 'text-2xl' and m-2*/
+p {
+    font-size: 1.5rem;
+    margin: 0.5;
+}
