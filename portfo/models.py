@@ -38,6 +38,9 @@ class Project(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     source_code = models.URLField(blank=True, null=True)
+    frameworks = models.TextField(max_length=200, blank=True, null=True)
+    features = models.CharField(max_length=200, blank=True, null=True)
+    installation = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return self.name
