@@ -11,6 +11,6 @@
     <form method="POST" action="{% url 'contact' %}" class="max-w-lg mx-auto mt-1 " enctype="multipart/form-data">
         {% csrf_token %}
         {{ form|crispy }}
-        <input class="bg-green-500 px-4 py-1 rounded hover:cursor-pointer hover:bg-green-600" type="submit" value="Submit">
+        <input class="bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600" type="submit" value="Submit">
     </form>
 {% endblock content %}
