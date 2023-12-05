@@ -3,13 +3,38 @@
 {% block title %}Project{% endblock title %}
 
 {% block content %}
-    <header class="text-center">
-        <h1 class="text-4xl font-bold mb-4">{{ project.name }}</h1>
-    </header>
-    <section class="text-center mt-5 text-2xl">
-        {{ project.description }}
-        <br>
-        <a href="{{ project.source_code }}" target="_blank" rel="noopener noreferrer" class="bg-green-500 px-4 py-1 rounded hover:cursor-pointer hover:bg-green-600">Source Code</a>
-    </section>
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-8">{{ project.name }}</h1>
 
-{% endblock content %}
+        <div class="bg-gray-100 p-4 rounded shadow mb-6">
+            <h2 class="text-2xl font-bold mb-2">Description</h2>
+            <p>{{ project.description }}</p>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded shadow mb-6">
+            <h2 class="text-2xl font-bold mb-2">Languages / Frameworks Used</h2>
+            <p>{{ project.frameworks }}</p>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded shadow mb-6">
+            <h2 class="text-2xl font-bold mb-2">Main Features</h2>
+            <p>{{ project.features }}</p>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded shadow mb-6">
+            <h2 class="text-2xl font-bold mb-2">How to Install</h2>
+            <p>{{ project.installation }}</p>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <a href="{{ project.source_code }}" target="_blank" rel="noopener noreferrer"class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Source Code</a>
+            <!-- Add other buttons as needed -->
+        </div>
+    </div>
+{% endblock content%}
+
+{% comment %} 
+    Technologies used / frameworks 
+    Project Features -- key features of the project 
+    Instalation instructions -- Link to readme?
+{% endcomment %}
