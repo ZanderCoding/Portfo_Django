@@ -2,12 +2,31 @@
 {% block title %}Skill{% endblock title %}
 
 {% block content %}
-    <header class="text-center">
-        <h1 class="text-4xl font-bold mb-4">{{skill.name}}</h1>
-    </header>
-    <hr>
-    <section class="mt-8 text-center">
-        <h3 class="text-2xl mb-2">{{ skill.field|title }}<h3>
-        <p class="text-2xl">{{ skill.description }}</p>
-    </section>
+    <div class="container mx-auto mt-8 text-center">
+        <h1 class="text-4xl font-bold mb-5">{{ skill.name }}</h1>
+
+        {% if skill.langsymbol %}
+            <div class="mb-8">
+                <img class="mx-auto max-w-full h-auto max-h-8" src="{{ skill.langsymbol.url }}" alt="{{ skill.name }}">
+            </div>
+        {% endif %}
+
+        <div class="bg-gray-100 p-4 rounded shadow mb-6">
+            <h2 class="text-2xl font-bold mb-2">Description</h2>
+            <p>{{ skill.description }}</p>
+        </div>
+        {% if skill.cert %}
+            <div class="bg-gray-100 p-4 rounded shadow mb-6">
+                <h2 class="text-2xl font-bold mb-2">Certifications</h2>
+                <p>
+                    <!-- Open in Another Tab Link -->
+                    <a href="{{ skill.cert.url }}" target="_blank" class="text-red-500">View Certification in Another Tab</a>
+                    <br>
+                    <!-- Download Link -->
+                    <a href="{{ skill.cert.url }}" download="cert.pdf" class="text-red-500">Download Certification</a>
+
+                </p>
+            </div>
+        {% endif %}
+    </div>
 {% endblock content %}

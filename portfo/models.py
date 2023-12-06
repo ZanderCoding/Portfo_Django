@@ -18,7 +18,7 @@ class Skill(models.Model):
         max_length=100, choices=FIELD, blank=True, null=True)
     langsymbol = models.ImageField(
         upload_to='lang_symbol', blank=True, null=True)
-    cert = models.ImageField(upload_to='certs', blank=True, null=True)
+    cert = models.FileField(upload_to='certs', blank=True, null=True)
 
     def __str__(self):
         return f"{self.name} | {self.field}"
