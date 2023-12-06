@@ -2,6 +2,37 @@
 {% block title %}Skill{% endblock title %}
 
 {% block content %}
+    <div class="container mx-auto mt-8">
+        <h1 class="text-center text-4xl font-bold mb-4">{{ skill.name }}</h1>
+
+        <div class="bg-gray-100 p-4 rounded shadow mb-6">
+            <h2 class="text-2xl font-bold mb-2">Description</h2>
+            <p>{{ skill.description }}</p>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded shadow mb-6">
+            <h2 class="text-2xl font-bold mb-2">Language Symbol</h2>
+            <p>{{ skill.langsymbol }}</p>
+        </div>
+
+        {% if skill.cert %}
+            <div class="bg-gray-100 p-4 rounded shadow mb-6">
+                <h2 class="text-2xl font-bold mb-2">Certifications</h2>
+                <p>
+                    <!-- Download Link -->
+                    <a href="{{ skill.cert.url }}" download="cert.pdf" class="text-blue-500">Download Certification</a>
+                    <br>
+                    <!-- Open in Another Tab Link -->
+                    <a href="{{ skill.cert.url }}" target="_blank" class="text-blue-500">View Certification in Another Tab</a>
+                </p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+
+
+{% comment %} {% block content %}
     <header class="text-center">
         <h1 class="text-4xl font-bold mb-4">{{skill.name}}</h1>
     </header>
@@ -14,6 +45,17 @@
         {% endif %}
         <h3 class="text-2xl mb-2">{{ skill.field|title }}<h3>
         <p class="text-2xl">{{ skill.description }}</p>
-        {% comment %} <img src"{{ skill.cert.url }}" alt="{{ skill.name }}"> {% endcomment %}
+        {% if skill.cert %}
+            <div class="p-4 mb-6">
+                <h2 class="text-2xl mb-2">Certifications</h2>
+                <p>
+                    <!-- Open in Another Tab Link -->
+                    <a href="{{ skill.cert.url }}" target="_blank" class="text-blue-500">View Certification in Another Tab</a>
+                    <br>
+                    <!-- Download Link -->
+                    <a href="{{ skill.cert.url }}" download="cert.pdf" class="text-blue-500">Download Certification</a>
+                </p>
+            </div>
+        {% endif %}
     </section>
-{% endblock content %}
+{% endblock content %} {% endcomment %}
