@@ -4,6 +4,13 @@
 {% block title %}Resume{% endblock title%}
 
 {% block content %}
-    <h1 class="text-center text-4xl pb-10">Resume</h1>
-    <img src="{% static 'portfo/images/Resume.png' %}" alt="Resume" class="pb-8">
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-bold mb-4">Resume</h1>
+        <!-- Open in Another Tab Link -->
+        <a href="{% static 'portfo/images/resume.png' %}" target="_blank" class="text-red-500">View Resume in Another Tab</a>
+        <br>
+        <!-- Download Link -->
+        <a href="{% static 'portfo/images/resume.png' %}" download="AlexanderSwearingenResume.pdf" class="text-red-500">Download Resume</a>
+        <img src="{% static 'portfo/images/resume.png' %}" alt="Resume" class="max-w-full h-auto m-8">
+    </div>
 {% endblock content %}
