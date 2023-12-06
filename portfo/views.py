@@ -54,3 +54,7 @@ def project_view(request):
 
 class ProjectDetailView(DetailView):
     model = Project
+
+
+class ResumeView(TemplateView):
+    template_name = 'portfo/resume.html'
