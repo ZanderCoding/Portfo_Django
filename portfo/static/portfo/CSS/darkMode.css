@@ -1,0 +1,102 @@
+/* colors for light / dark mode */
+:root {
+    --background-color-light: #ffffff;
+    --footer-nav-color-light: #e0e0e0;
+    --text-color-light: #333333;
+    --background-color-dark: #121212;
+    --footer-nav-color-dark: #272727;
+    --text-color-dark: #ffffff;
+}
+
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+footer {
+    background-color: var(--footer-nav-color-light);
+}
+
+nav {
+    background-color: var(--footer-nav-color-light);
+}
+
+.dark-mode footer {
+    background-color: var(--footer-nav-color-dark);
+    color: var(--text-color-dark);
+}
+
+.dark-mode nav {
+    background-color: var(--footer-nav-color-dark);
+}
+
+.dark-mode body {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Keeping user preference */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-color-dark);
+        color: var(--text-color-dark);
+    }
+
+    body:not(.dark-mode) {
+        background-color: var(--background-color-light);
+        color: var(--text-color-light);
+    }
+}
+
+/* slider */
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    /* Align items vertically in the center */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-left: auto;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}

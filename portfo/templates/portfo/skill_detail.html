@@ -1,7 +1,10 @@
 {% extends "portfo/_base.html" %}
+
 {% block title %}Skill{% endblock title %}
+{% load static %}
 
 {% block content %}
+    <link rel="stylesheet" href="{% static 'portfo/CSS/project-skill-Detail.css' %}" type="text/css">
     <div class="container mx-auto text-center">
         <h1 class="text-4xl font-bold mb-5">{{ skill.name }}</h1>
 
@@ -26,7 +29,6 @@
                     <br>
                     <!-- Download Link -->
                     <a href="{{ skill.cert.url }}" download="cert.pdf" class="text-red-500">Download Certification</a>
-
                 </p>
             </div>
         {% endif %}
