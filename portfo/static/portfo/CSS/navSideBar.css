@@ -29,15 +29,6 @@ body {
     margin-right: auto;
 }
 
-/* ul {
-    display: flex;
-    flex: 1;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-/* class="flex-1 mx-auto flex-container" */
-
 @media screen and (max-width: 767px) {
     .menu-toggle {
         display: block;
@@ -53,7 +44,6 @@ body {
         /* Initially off-screen */
         width: 250px;
         height: 100%;
-        background-color: #333;
         padding-top: 60px;
         transition: left 0.3s ease;
         overflow-y: auto;
@@ -73,7 +63,6 @@ body {
     }
 
     .navbar a {
-        color: #fff;
         text-decoration: none;
         font-size: 18px;
         display: block;
@@ -84,7 +73,6 @@ body {
         position: fixed;
         bottom: 20px;
         left: 20px;
-        color: #fff;
         display: flex;
         align-items: center;
     }
