@@ -7,32 +7,32 @@
         <link rel="icon" type="image/x-icon" href="{% static 'portfo/favicon.ico' %}">
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'portfo/CSS/darkMode.css' %}" type="text/css">
-        {% comment %} <link rel="stylesheet" href="{% static 'portfo/CSS/backgroundImage.css' %}" type="text/css"> {% endcomment %}
+        <link rel="stylesheet" href="{% static 'portfo/CSS/navSideBar.css' %}" type="text/css">
         <title>{% block title %}{% endblock title %}</title>
     </head>
     <body class="flex flex-col min-h-screen font-sans">
-        <nav class="p-4 text-xl text-red-500">
-             <div class="flex-1 mx-auto flex-container">
-                <a href="{% url 'home' %}" class="pr-2">Home</a>
-                <a href="{% url 'about' %}" class="pr-2">About</a>
-                <a href="{% url 'skill' %}" class="pr-2">Skills</a>
-                <a href="{% url 'projects-page' %}" class="pr-2">Projects</a>
-                <a href="{% url 'contact' %}" class="pr-2">Contact</a>
-                <a href="{% url 'resume' %}" class="pr-2">Resume</a>
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
+        <nav class="navbar p-4 text-xl text-red-500">
+            <ul>
+                <li><a href="{% url 'home' %}" class="pr-2">Home</a></li>
+                <li><a href="{% url 'about' %}" class="pr-2">About</a></li>
+                <li><a href="{% url 'skill' %}" class="pr-2">Skills</a></li>
+                <li><a href="{% url 'projects-page' %}" class="pr-2">Projects</a></li>
+                <li><a href="{% url 'contact' %}" class="pr-2">Contact</a></li>
+                <li><a href="{% url 'resume' %}" class="pr-2">Resume</a></li>
                 <label class="switch">
                     <input type="checkbox" id="dark-mode-toggle">
                     <span class="slider"></span>
                 </label>
-            </div>
+            </ul>
         </nav>
-        <hr>
-        {% comment %} <img id="modeBGImage" src="{% static 'portfo/images/deepspace.jpg' %}" alt="Deep Space" style="max-width: 100%; border: 2px solid #333;"> {% endcomment %}
+        {% comment %} <hr> {% endcomment %}
         <div class="container mx-auto mt-8">
             {% block content %}
             {% endblock content %}
         </div>
         <footer class="mt-auto">
-            <hr>
+            {% comment %} <hr> {% endcomment %}
             <div class=" p-3 mx-auto flex justify-between items-center">
                 <!-- Contact Information -->
                 <div>
@@ -53,5 +53,6 @@
         </footer>
         <script src="{% static 'portfo/js/darkMode.js' %}"></script>
         <script src="{% static 'portfo/js/logoChanger.js' %}"></script>
+        <script src="{% static 'portfo/js/navSideBar.js' %}"></script>
     </body>
 </html>
