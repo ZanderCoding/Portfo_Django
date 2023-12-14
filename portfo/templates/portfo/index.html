@@ -5,16 +5,15 @@
 
 {% block content %}
     <header class="text-center">
-        <div id="typed-text-1" class="font-bold text-6xl mb-12"></div>
+        <div id="typed-text-1" class="font-bold text-5xl lg:text-6xl mb-12"></div>
         <h2 class="text-4xl font-bold mb-12">My name is Alexander S.</h2>
-        <div class="text-3xl flex items-center text-center justify-center">
-            <div>I am a</div>
-            <span>&nbsp;</span>
-            <div id="typed-text-2"></div>
+        <div class="text-3xl flex flex-col items-center text-center justify-center">
+            <div class="intro-text">I am a&nbsp;</div>
+            <div id="typed-text-2" class="pr-1 pl-1" style="min-height: 2.5em;"></div>
         </div>
     </header> 
     <section class="mt-10 text-center">
-        <p class="text-2xl">I'm a tech enthusiast adept at Python, Django, and cybersecurity, 
+        <p class="text-2xl pr-1 pl-1 pb-3">I'm a tech enthusiast adept at Python, Django, and cybersecurity, 
             crafting robust web applications and designing engaging user 
             interfaces with JavaScript, HTML, CSS (especially Tailwind CSS).</p>
         {% comment %} <p class="text-2xl mb-2">
