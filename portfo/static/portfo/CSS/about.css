@@ -10,3 +10,15 @@ p {
     font-size: 1.5rem;
     margin: 0.5;
 }
+
+@media screen and (max-width: 767px) {
+    h3 {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin: 0.5;
+    }
+}
