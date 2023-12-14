@@ -33,12 +33,12 @@
         </div>
         <footer class="mt-auto">
             {% comment %} <hr> {% endcomment %}
-            <div class=" p-3 mx-auto flex justify-between items-center">
+            <div class=" p-3 mx-auto flex flex-col lg:flex-row justify-between items-center">
                 <!-- Contact Information -->
-                <div>
-                    <h4 class="text-xs">Contact: Alexander.Swearingen24@gmail.com | Phone: +1 (208)-301-8274 | <a href="{% url 'contact' %}">Contact Page</a></h4>
+                <div class="mb-4 lg:mb-0">
+                    <h4 class="text-xs lg:text-sm">Contact: Alexander.Swearingen24@gmail.com | Phone: +1 (208)-301-8274 | <a href="{% url 'contact' %}">Contact Page</a></h4>
                 </div>
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 text-xs lg:text-sm">
                     <!-- GitHub -->
                     <a href="https://github.com/ZanderCoding" target="_blank" rel="noopener noreferrer">
                         <img id="modeImage" src="{% static 'portfo/images/github-mark-white.png' %}" alt="GitHub" class="h-6 w-6">
