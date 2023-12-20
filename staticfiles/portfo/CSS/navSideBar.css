@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+    /* Initially hide the menu-toggle */
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Additional styles for horizontal layout */
+    display: flex;
+    flex: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .menu-toggle {
+        display: block;
+        /* Show the menu-toggle when screen size is small */
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        /* Stack the navbar items vertically on small screens */
+        position: fixed;
+        top: 0;
+        left: -300px;
+        /* Initially off-screen */
+        width: 250px;
+        height: 100%;
+        padding-top: 60px;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .navbar ul {
+        /* Remove additional styles for vertical layout */
+        display: block;
+        flex: initial;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    .navbar li {
+        padding: 5px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .dark-mode-toggle {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .dark-mode-toggle label {
+        margin-right: 10px;
+    }
+}
